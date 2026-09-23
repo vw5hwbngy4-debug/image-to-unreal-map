@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://madefromchat.wolken.page/image-to-unreal-map/sitemap.xml

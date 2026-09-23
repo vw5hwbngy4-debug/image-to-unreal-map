@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta name="theme-color" content="#071421">
+<title>SpawnMap.ai · Tactical Ops map feed · Made From Chat archive</title>
+<meta name="description" content="SpawnMap.ai preserved inside Made From Chat: swipe through Tactical Ops maps, walk them, inspect layouts, browse GPT-built iterations and review recorded runtime telemetry.">
+<link rel="icon" href="/image-to-unreal-map/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/image-to-unreal-map/apple-touch-icon.png">
+<link rel="stylesheet" href="/image-to-unreal-map/assets/swipe-feed.css?v=9.4">
+<script defer src="/image-to-unreal-map/assets/swipe-feed.js?v=9.4"></script>
+</head>
+<body class="landing-active">
+<div class="app" data-app>
+  <header class="chrome top-chrome">
+    <a class="brand" href="/image-to-unreal-map/" aria-label="SpawnMap.ai">SPAWNMAP<span>.AI</span></a>
+    <nav class="mode-tabs" aria-label="Map mode">
+      <button class="active" data-mode="walk" type="button">WALK</button>
+      <button data-mode="overview" type="button">OVERVIEW</button>
+      <button data-mode="telemetry" type="button">TELEMETRY</button>
+    </nav>
+    <div class="menu-orb">
+      <div class="menu-speech" data-menu-speech aria-live="polite" hidden>
+        <span data-menu-speech-text>hi.</span>
+      </div>
+      <button class="menu-button" type="button" data-menu aria-label="Open menu">•••</button>
+    </div>
+  </header>
+
+  <section class="server-landing" data-landing>
+    <div class="landing-center">
+      <div class="server-status-line checking" data-landing-status>
+        <i></i><span>TO-GPT SERVER STATUS: <b data-server-state>CHECKING</b></span>
+      </div>
+
+      <div class="population">
+        <article>
+          <img src="/image-to-unreal-map/media/landing/human.jpeg" alt="Human player">
+          <div><b data-human-count>—</b><span>HUMAN</span></div>
+        </article>
+        <article>
+          <img src="/image-to-unreal-map/media/landing/bot.jpeg" alt="Tactical Ops bot">
+          <div><b data-bot-count>—</b><span>BOT</span></div>
+        </article>
+        <article>
+          <img src="/image-to-unreal-map/media/landing/hossie.jpeg" alt="Hossie">
+          <div><b data-hossie-count>—</b><span>HOSSIE</span></div>
+        </article>
+      </div>
+      <a class="landing-import-map" href="/image-to-unreal-map/viewer/import.html"><b>IMPORT MAP</b><span>DROP T3D / SPAWNMAP ZIP</span></a>
+    </div>
+
+    <button class="landing-edge landing-edge-left" type="button" data-landing-maps aria-label="Open all maps">
+      <span>MAPS</span><i>‹</i>
+    </button>
+    <button class="landing-edge landing-edge-right" type="button" data-landing-builds aria-label="Open GPT builds">
+      <i>›</i><span>GPT BUILDS</span>
+    </button>
+
+    <button class="landing-swipe" type="button" data-enter-feed>
+      <span>SWIPE UP · MAP FEED</span>
+      <i>⌄</i>
+    </button>
+  </section>
+
+  <main class="feed-stage" data-stage aria-live="polite">
+    <div class="poster" data-poster>
+      <img data-thumb alt="">
+      <div class="poster-shade"></div>
+    </div>
+    <iframe class="scene-frame" data-scene-frame title="Map scene" tabindex="-1"></iframe>
+
+    <section class="map-library-panel" data-library hidden aria-label="All maps">
+      <div class="panel-title"><small>MAPS</small><strong>ALL MAPS</strong></div>
+      <div class="map-library-grid" data-library-grid></div>
+    </section>
+
+    <section class="iterations-panel" data-iterations hidden aria-label="Map iterations">
+      <div class="panel-title"><small>GPT BUILDS</small><strong data-iterations-title>ITERATIONS · REMIXES</strong></div>
+      <div class="iterations-grid" data-iterations-grid></div>
+    </section>
+
+    <button class="edge-nav edge-left" type="button" data-edge-maps aria-label="Open all maps" hidden>
+      <i>‹</i><span>MAPS</span>
+    </button>
+    <button class="edge-nav edge-right" type="button" data-edge-builds aria-label="Open GPT build iterations" hidden>
+      <span>GPT BUILDS</span><i>›</i>
+    </button>
+
+    <div class="no-session-card chrome" data-no-session hidden>
+      <small>TELEMETRY</small>
+      <strong data-no-session-title>NO SERVER SESSION</strong>
+      <span>No recorded Tactical Ops session for this map.</span>
+    </div>
+
+    <div class="walk-cta" data-walk-cta>
+      <button type="button" data-enter-walk><span>▶</span> WALK</button>
+    </div>
+
+    <div class="map-meta chrome" data-meta>
+      <small data-badge>CLASSIC</small>
+      <h1 data-title>RapidWater][</h1>
+      <p data-subtitle>Swipe up for the next map</p>
+    </div>
+    <div class="map-count chrome" data-count>1 / 7</div>
+    <div class="swipe-hint chrome" data-swipe-hint><span>↑↓ MAP</span><span>←→ MODE</span></div>
+  </main>
+
+  <div class="walk-overlay" data-walk-overlay hidden>
+    <iframe data-walk-frame title="Walk map"></iframe>
+  </div>
+
+  <aside class="drawer" data-drawer hidden>
+    <button class="drawer-close" type="button" data-close-menu>×</button>
+    <div class="drawer-brand">SPAWNMAP<span>.AI</span></div>
+    <p>Tactical Ops maps, directly in the browser.</p>
+    <nav>
+      <a href="/image-to-unreal-map/about.html">About</a>
+      <a href="/image-to-unreal-map/analyze.html">Runtime</a>
+      <a href="/image-to-unreal-map/affiliates.html">Affiliates</a>
+      <a href="/image-to-unreal-map/viewer/import.html">Import map</a>
+    </nav>
+    <small>Map generation uses private GPT tooling and a private build worker. The public site is the map experience.</small>
+  </aside>
+  <div class="drawer-backdrop" data-backdrop hidden></div>
+</div>
+<noscript>SpawnMap requires JavaScript for the interactive map feed.</noscript>
+</body>
+</html>
